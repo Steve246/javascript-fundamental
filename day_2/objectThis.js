@@ -1,12 +1,12 @@
 // apa itu this ??, this adalah referensi ke object milih siapa
-// const myObj = {
-//   x: 50,
-//   fun: function () {
-//     console.log(this.x);
-//   },
-// };
+const myObj = {
+  x: 50,
+  fun: function () {
+    console.log(this.x);
+  },
+};
 
-// myObj.fun();
+myObj.fun();
 
 //console.log(myObj.fun());
 //implisit binding --> tidak ditentukan olehg developer, tp ditentukan oleh JS
