@@ -30,11 +30,22 @@ class MethodBook extends Book {
     super(title, author, pages, kodeBuku);
 
     this.library = library;
-    this.title = library.title;
+    this.panjang = library.length;
   }
 
   addBuku(book) {
-    return this.library.push(book);
+    let checkInsert = true;
+    for (let i = 0; i <= 4; i++) {
+      if (book[i] == "") {
+        console.log("Buku tidak dapat diinsert");
+
+        checkInsert = false;
+      }
+    }
+
+    if (checkInsert == true) {
+      return this.library.push(book);
+    }
   }
 
   getAll() {
@@ -46,7 +57,8 @@ class MethodBook extends Book {
   }
 
   searchByTitle(titleBook) {
-    var breakCheck = false;
+    let breakCheck = false;
+    let check = true;
 
     for (let x = 0; x < this.library.length; x++) {
       // console.log("ini", x);
@@ -60,8 +72,13 @@ class MethodBook extends Book {
 
       if (breakCheck == true) {
         // console.log("selesai");
+        check = false;
         break;
       }
+    }
+
+    if (check == true) {
+      console.log("Buku Not Found");
     }
   }
 }
@@ -70,8 +87,8 @@ const newBook = new MethodBook();
 
 //masukin minimal 5 buku
 // insert buku
-newBook.addBuku(["Desa Penari", "Echo", "500", "C001"]);
-newBook.addBuku(["Warung WMB", "Alpha", "200", "C002"]);
+newBook.addBuku(["", "Alpha", "200", "C002"]);
+newBook.addBuku(["Warung WMB", "", "200", "C002"]);
 newBook.addBuku(["Desa Joget", "Charlie ", "250", "C003"]);
 newBook.addBuku(["Desa Dangdut", "Delta", "200", "C004"]);
 newBook.addBuku(["Marvel", "Markus", "300", "C005"]);
@@ -82,10 +99,12 @@ newBook.getAll();
 
 // SearchByTitle
 
-newBook.searchByTitle("Warung WMB");
+newBook.searchByTitle("Marvel");
 
 //deleteBuku
-newBook.deleteOneBook();
-newBook.getAll();
+// newBook.deleteOneBook();
+// newBook.getAll();
 
 //validasi
+
+//tinggal insert gak berhasil
