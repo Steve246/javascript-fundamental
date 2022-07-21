@@ -17,32 +17,75 @@
 //nama repo --> challenge class
 
 class Book {
-  constructor(title, author, pages, kodeBuku, library = []) {
+  constructor(title, author, pages, kodeBuku) {
     this.title = title;
     this.author = author;
     this.pages = pages;
     this.kodeBuku = kodeBuku;
+  }
+}
+
+class MethodBook extends Book {
+  constructor(title, author, pages, kodeBuku, library = []) {
+    super(title, author, pages, kodeBuku);
+
     this.library = library;
+    this.title = library.title;
   }
 
   addBuku(book) {
     return this.library.push(book);
   }
+
+  getAll() {
+    console.log(newBook.library);
+  }
+
+  deleteOneBook() {
+    return this.library.pop();
+  }
+
+  searchByTitle(titleBook) {
+    var breakCheck = false;
+
+    for (let x = 0; x < this.library.length; x++) {
+      // console.log("ini", x);
+      for (let y = 0; y < x; y++) {
+        if (titleBook == newBook.library[x][y]) {
+          console.log(newBook.library[x]);
+          breakCheck = true;
+          break;
+        }
+      }
+
+      if (breakCheck == true) {
+        // console.log("selesai");
+        break;
+      }
+    }
+  }
 }
 
-// class MethodBook extends Book {
-//   constructor() {
-//     super(title, author, pages, kodeBuku)
-//   }
-// }
-
-const newBook = new Book();
+const newBook = new MethodBook();
 
 //masukin minimal 5 buku
+// insert buku
 newBook.addBuku(["Desa Penari", "Echo", "500", "C001"]);
 newBook.addBuku(["Warung WMB", "Alpha", "200", "C002"]);
 newBook.addBuku(["Desa Joget", "Charlie ", "250", "C003"]);
-newBook.addBuku(["Enigma", "Delta", "200", "C004"]);
+newBook.addBuku(["Desa Dangdut", "Delta", "200", "C004"]);
 newBook.addBuku(["Marvel", "Markus", "300", "C005"]);
 
-console.log(newBook.library);
+// GetAll
+
+newBook.getAll();
+
+// SearchByTitle
+
+newBook.searchByTitle("Warung WMB");
+
+//deleteBuku
+newBook.deleteOneBook();
+newBook.getAll();
+
+//validasi
