@@ -22,7 +22,7 @@ function FizzBuzz(inputs) {
       let hasil = "BUZZ";
       console.log(hasil);
     } else {
-      let hasil = ` ${i}`;
+      let hasil = `${i}`;
       console.log(hasil);
     }
   }

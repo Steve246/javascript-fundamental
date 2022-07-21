@@ -91,7 +91,7 @@ NewProduct.prototype.info = function () {
   return `productId ${this.productId} productName ${this.name}`;
 };
 
-let product06 = new NewProduct(999, "parfum");
+let product06 = NewProduct(999, "parfum");
 
 console.log(product06.info());
 
@@ -103,8 +103,8 @@ function Car(brand, name) {
   };
 }
 
-const corolla = new Car("Toyota", "Corolla");
-const terios = new Car("Daihatsu", "Terios");
+const corolla = Car("Toyota", "Corolla");
+const terios = Car("Daihatsu", "Terios");
 console.log(corolla);
 console.log(terios);
 corolla.run();
