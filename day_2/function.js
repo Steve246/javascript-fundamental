@@ -142,3 +142,14 @@ function perkalian(x, y) {
 }
 
 perkalian(2, 3);
+
+//IIFE (Immediately Invoked Function Expression)
+
+let result = (function minus(a, b) {
+  return a - b;
+})(12, 3);
+console.log(result);
+
+(function add(a, b) {
+  console.log(a + b);
+})(3, 1);

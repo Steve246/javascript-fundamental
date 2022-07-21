@@ -28,7 +28,7 @@ console.log("nums2 " + nums2);
 let arr = [1, 23, 234, 34];
 let fe = arr.forEach((e) => {
   return e * 2;
-});
+}); //karena dia gak return apa-apa, kalau mau ada hasilnya pake map
 
 let me = arr.map((e) => {
   return e * 2;

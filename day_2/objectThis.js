@@ -31,3 +31,6 @@ foo.apply(anotherObj, ["doni", "ragunan"]);
 //bind, paling sering digunakan
 const data = foo.bind(anotherObj, "doni", "ragunan");
 data();
+
+const data2 = foo.bind({ a: "azerty" });
+data2();
