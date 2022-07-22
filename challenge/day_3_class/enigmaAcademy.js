@@ -30,7 +30,7 @@ class MethodBook extends Book {
     super(title, author, pages, kodeBuku);
 
     this.library = library;
-    this.panjang = library.length;
+    // this.panjang = library.length;
   }
 
   addBuku(book) {
@@ -44,11 +44,15 @@ class MethodBook extends Book {
     }
 
     if (checkInsert == true) {
+      console.log("Insert Berhasil");
       return this.library.push(book);
     }
   }
 
   getAll() {
+    // console.log(`${this.library}`);
+    // console.log(library);
+    //pake library
     console.log(newBook.library);
   }
 
@@ -57,8 +61,8 @@ class MethodBook extends Book {
   }
 
   searchByTitle(titleBook) {
-    let breakCheck = false;
-    let check = true;
+    let breakCheck = false; //kalau true berati ada judul buku yg berhasil ditemukan
+    let check = true; // kalau masih true brati judul buku gak berhasil ditemukan
 
     for (let x = 0; x < this.library.length; x++) {
       // console.log("ini", x);
@@ -99,12 +103,14 @@ newBook.getAll();
 
 // SearchByTitle
 
-newBook.searchByTitle("Marvel");
+// newBook.searchByTitle("Marvel");
+// newBook.searchByTitle("Test");
 
 //deleteBuku
 // newBook.deleteOneBook();
 // newBook.getAll();
 
 //validasi
-
-//tinggal insert gak berhasil
+//insert berhasil
+//search tidak berhasil
+//buku tdk dpt diinsert
