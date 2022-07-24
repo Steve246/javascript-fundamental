@@ -4,19 +4,19 @@
 
 //cara pertama menggunakan array.from()
 
-let numbers = [1, 2, 3];
-let nums = Array.from(numbers);
-nums[0] = 5;
-console.log("numbers " + numbers);
-console.log("nums " + nums);
+// let numbers = [1, 2, 3];
+// let nums = Array.from(numbers);
+// nums[0] = 5;
+// console.log("numbers " + numbers);
+// console.log("nums " + nums);
 
 //cara kedua menggunakan spread operator sama seperti di immutable object
 
-let numbers2 = [4, 5, 6];
-let nums2 = [...numbers2];
-nums2[0] = 7;
-console.log("numbers2 " + numbers2);
-console.log("nums2 " + nums2);
+// let numbers2 = [4, 5, 6];
+// let nums2 = [...numbers2];
+// nums2[0] = 7;
+// console.log("numbers2 " + numbers2);
+// console.log("nums2 " + nums2);
 
 //array pada javascript itu miliki built-in methods, dan dibagian menjadi 2
 
@@ -35,8 +35,9 @@ let me = arr.map((e) => {
 });
 
 let me2 = arr.filter((e) => {
-  return e * 2;
+  return e > 24;
 });
+//filter kalau mau filter pada array
 
 console.log(arr);
 console.log(fe);
@@ -47,3 +48,7 @@ console.log(me2);
 let arr2 = [2, 3, 4, 5, 6];
 let [a, b, ...c] = arr2;
 console.log(a, b, ...c);
+
+let arr3 = [1, 4, 5, 6, 7, 8];
+let [x, ...y] = arr3;
+console.log(x, ...y);

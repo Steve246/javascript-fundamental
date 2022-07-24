@@ -17,7 +17,7 @@ let quote = "hari ini adalah hari jum'at";
 console.log(quote);
 
 // \n untuk memberikan abrus baru
-quote = "Nama: Doni \n Alamat: Ragunan";
+quote = "Nama: Doni  Alamat: Ragunan  test ja";
 console.log(quote);
 
 // \t untuk memberikan tab atau spasi

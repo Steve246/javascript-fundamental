@@ -45,23 +45,24 @@ console.log(arr);
 
 //shift --> hapus element pertama
 
-arr.shift();
-console.log(arr);
-console.log(arr.length);
-arr.push("animals");
-console.log(arr);
-console.log(arr.length);
+// arr.shift();
+// console.log("ini yang dihapus", arr.shift());
+// console.log(arr);
+// console.log(arr.length);
+// arr.push("animals");
+// console.log(arr);
+// console.log(arr.length);
 
-//unshift --> menambahkan element diawal
-arr.unshift("kuda", "liunah");
-console.log(arr);
-console.log(arr.length);
+// //unshift --> menambahkan element diawal
+// arr.unshift("kuda", "liunah");
+// console.log(arr);
+// console.log(arr.length);
 
-//splice --> bisa masukin, dan delete
+// //splice --> bisa masukin, dan delete
 
-arr.splice(1, 0, "semut alaska");
-console.log(arr);
+// arr.splice(1, 0, "semut alaska");
+// console.log(arr);
 
-//slice untuk ambil index elemen yang kita mau
-animalsClone = arr.slice(1, 3);
-console.log(animalsClone);
+// //slice untuk ambil index elemen yang kita mau
+// animalsClone = arr.slice(1, 3);
+// console.log(animalsClone);

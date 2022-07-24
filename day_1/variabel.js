@@ -7,7 +7,9 @@
 // //variabel
 // //bisa di declare dan di assign kembali
 // var a = 20;
+
 // let b = 10;
+
 // const c = 10;
 
 // console.log(a);
@@ -16,20 +18,19 @@
 
 // //redeclared
 
-// a = 10;
 // var a; //proses ini namanya hoisting
 // a = 30;
 // console.log("ini a yang berubah: ", a);
 
 // //reassign
-// a = true;
+// var a = true;
 // console.log(a);
 
 // let
 
 // let a = 10;
 // console.log(a);
-// // let a = 20 // gak bisa di redeclare
+// let a = 20; // gak bisa di redeclare
 
 // //bisa di reasign
 // a = "doni";

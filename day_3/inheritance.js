@@ -18,7 +18,7 @@ class Kucing extends Hewan {
 
     super("kucing");
     //super musti dipanggil sblm nulis this, kalau ngak reference error
-    this.name = "steven";
+    this.name = "kucing";
   }
 
   berguling() {

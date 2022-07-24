@@ -28,7 +28,8 @@
 let a = 4;
 console.log(a == 4); // bandingin nilai jadi true
 
-// console.log(a === 4); //false, karena bandiungin tipe
+a = parseInt(a); //pake ini jadi true
+console.log(a === 4); //false, karena bandiungin tipe
 
 // console.log("true" == true);
 
