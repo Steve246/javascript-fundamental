@@ -71,13 +71,13 @@ class ParkService {
       if (index !== -1) {
         carParkir.splice(index, 1);
         return new Response(
-          `Mobil dengan Nomor ${NoPolCheck} berhasil keluar`,
+          `Mobil dengan Nomor ${noPolCheck} berhasil keluar`,
           null
         );
       } else {
         return new Response(
           null,
-          `Mobil dengan Nomor ${NoPolCheck}  tidak ditemukan`
+          `Mobil dengan Nomor ${noPolCheck}  tidak ditemukan`
         );
       }
     }, 1500);
@@ -121,11 +121,9 @@ function main() {
 
   console.log(createPark);
 
-  console.log(carParkir);
-
   //parkir mobil
 
-  let parkirMobil1 = parkiran.carPark(new Car("764444", "Budi Setiawan")); // park mobil
+  let parkirMobil1 = parkiran.carPark(new Car("764444", "Budi Setiawan"));
 
   console.log(parkirMobil1);
 

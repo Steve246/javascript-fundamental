@@ -48,7 +48,7 @@
 //   return users;
 // }
 
-// // hanya dapet array kosong
+// hanya dapet array kosong
 // function findUser(userName) {
 //   const userRepo = userCredintialRepo();
 //   console.log(userRepo);
@@ -62,6 +62,7 @@
 //tujuan asynchronous biar gak ketahan, misal manggil API. Kan ada latency jadi yang bawah"nya bisa kepanggil
 
 // kalau panggil API, dan kita butuh data bisa diarahin ke loading screen. Jadi sampe data didapat kita ditaro di loading screen, kalau kelamahan bakal diarahin ke timeout --> error box
+
 function userCredintialRepo(findUser) {
   setTimeout(() => {
     let users = [

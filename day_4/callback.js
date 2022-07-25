@@ -21,28 +21,28 @@
 
 //aplikasiin callback
 
-// function minumKopi(error, output) {
-//   if (error) {
-//     console.log(`Kecewa ${error}`);
-//   } else {
-//     console.log(`Trimakasih, sruputt ${output}, ahh`);
-//   }
-// }
+function minumKopi(error, output) {
+  if (error) {
+    console.log(`Kecewa ${error}`);
+  } else {
+    console.log(`Trimakasih, sruputt ${output}, ahh`);
+  }
+}
 
-// function pesanMinum(pesanan, kirimPesan) {
-//   console.log(`menunggu pesanan ${pesanan} sedang diproses`);
+function pesanMinum(pesanan, kirimPesan) {
+  console.log(`menunggu pesanan ${pesanan} sedang diproses`);
 
-//   setTimeout(() => {
-//     if (pesanan === "teh") kirimPesan(`Pesanan ${pesanan} tidak ada`);
-//     else {
-//       const hasil = `Kopi ${pesanan}`;
-//       kirimPesan(null, hasil); //callback disini, sama dirinya sendiri
-//     }
-//   }, 2000);
-// }
+  setTimeout(() => {
+    if (pesanan === "teh") kirimPesan(`Pesanan ${pesanan} tidak ada`);
+    else {
+      const hasil = `Kopi ${pesanan}`;
+      kirimPesan(null, hasil); //callback disini, sama dirinya sendiri
+    }
+  }, 2000);
+}
 
-// pesanMinum("Latte", minumKopi);
-// pesanMinum("teh", minumKopi);
+pesanMinum("Latte", minumKopi);
+pesanMinum("teh", minumKopi);
 
 //buat kalau kita sedang menunggu kopi dibuat
 
