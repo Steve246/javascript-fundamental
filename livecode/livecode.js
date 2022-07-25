@@ -13,9 +13,11 @@ class ParkService {
       let slotParkir = jumlahLahan;
       for (let x = 0; x < slotParkir; x++) {
         // carParkir[x] = "Empty Slot";
-        // carParkir.push("Empty");
-        console.log("for jalan");
+        carParkir.push("Empty");
+        // console.log("for jalan");
       }
+
+      this.jumlahLahan = jumlahLahan;
 
       return new Response(
         `Pembuatan Parkir Berhasil, terdapat ${slotParkir} parkiran kosong`,
@@ -49,6 +51,7 @@ class ParkService {
           //masukin ke parkir
 
           carParkir.push(car);
+          return new Response(`Mobil ${noPolBaru} masuk ke parkiran`, null);
         }
       } else {
         //parkiran udh penuh
@@ -68,7 +71,7 @@ class ParkService {
       if (index !== -1) {
         carParkir.splice(index, 1);
         return new Response(
-          `Mobil dengan Nomor ${NoPolCheck} berhasil terhapus`,
+          `Mobil dengan Nomor ${NoPolCheck} berhasil keluar`,
           null
         );
       } else {
@@ -80,10 +83,21 @@ class ParkService {
     }, 1500);
   };
 
-  carCheck = (parkCapacity, sisaSlot, parkir) => {
+  carCheck = () => {
+    // parkCapacity, sisaSlot, parkir
     setTimeout(() => {
+      let parkirAvailable = 0;
+      let parkirUnavailable = 0;
+      for (let x = 0; x < carParkir.length; x++) {
+        if (carParkir[x] != "Empty") {
+          parkirUnavailable += 1;
+        } else {
+          parkirAvailable += 1;
+        }
+      }
+
       return new Response(
-        `capacity: ${parkCapacity}, remaining : ${sisaSlot}, parkedCar: ${parkir} `
+        `capacity: ${this.jumlahLahan}, remaining : ${parkirAvailable}, parkedCar: ${parkirUnavailable} `
       );
     }, 500);
   };
@@ -111,13 +125,23 @@ function main() {
 
   //parkir mobil
 
-  // let parkirMobil1 = parkiran.carPark(new Car("764444", "Budi Setiawan")); // park mobil
+  let parkirMobil1 = parkiran.carPark(new Car("764444", "Budi Setiawan")); // park mobil
 
-  // console.log(parkirMobil1);
+  console.log(parkirMobil1);
 
-  // let parkirMobil2 = parkiran.carPark(new Car("75444", "Andrew"));
+  let parkirMobil2 = parkiran.carPark(new Car("75444", "Andrew"));
 
-  // console.log(parkirMobil2);
+  console.log(parkirMobil2);
+
+  //keluar mobil
+
+  let keluarMobil1 = parkiran.carLeave("75444");
+  console.log(keluarMobil1);
+
+  //checkMobil
+
+  let checkParkir = parkiran.carCheck();
+  console.log(checkParkir);
 }
 
 main();
