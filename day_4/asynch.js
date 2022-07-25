@@ -71,7 +71,7 @@ function userCredintialRepo(findUser) {
       },
       {
         userName: "fadli",
-        passowrd: 4321,
+        password: 4321,
       },
     ];
     findUser(users);

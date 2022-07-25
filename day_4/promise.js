@@ -4,7 +4,7 @@
 // 3. Kondisi Rejected (Janji gagal terpenuhi)
 
 let userName = "doni";
-let password = "123";
+let password = "1234";
 
 const janji = new Promise((resolve, reject) => {
   let id = 1234;
@@ -18,7 +18,7 @@ const janji = new Promise((resolve, reject) => {
     } else {
       reject("invalid username or password");
 
-      //parameter kedua dari prmised
+      //parameter kedua dari promised
       //fungsi yang dpt terima 1 parameter, yaituy reason
 
       //kasih alesan kenapa promised gak terpenuhi padahal udh dipanggil
